@@ -122,6 +122,25 @@ h1 {
     height: 24px;
     margin-left: 10px;
 }
+.first-container img{
+    width: 20%;
+}
+.second-container{
+    text-align: center;
+}
+.second-container-Flex{
+    display: flex;
+}
+.second-container img{
+    width: 20%;
+}
+.second-container .innerSec{
+
+}
+.smallimg{
+    width: 10%;
+    align-items: center;
+}
 
 .thead-container {
     position: relative;
@@ -141,7 +160,7 @@ h1 {
                           "meisi4 meisi5 meisi6 ";
     gap: 10px;
     position: absolute;
-    top: 17%;
+    top: 19%;
     left: 16%;
 }
 
@@ -165,7 +184,85 @@ h1 {
     font-weight: bold; /* テキストを強調 */
 }
 
+.content{
+    text-align: center;
+    color: #353535;
+}
+.card {
+  background-color: #EAF6FB;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative; /* 背景形状を使うために必要 */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 66.66%; /* 幅を3分の2に設定 */
+  height: 200px; /* 高さを少し増やす */
+  margin-left: auto; /* カードを中央揃え */
+  margin-right: auto;
+}
 
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* 背景形状の幅 */
+  background-image: url('img/Rectangle-278.png'); /* 背景形状の画像を指定 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0; /* 背景をカード内容より後ろに */
+}
+
+.card .number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #008CBA;
+  margin-right: 20px;
+  z-index: 1; /* 背景より前面に */
+}
+
+.card .image {
+  flex-shrink: 0;
+  margin-right: 20px;
+  z-index: 1; /* 背景より前面に */
+}
+
+.card .image img {
+  border-radius: 10px;
+  width: 150px;
+  height: auto;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  z-index: 1; /* 背景より前面に */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    width: 90%; /* モバイル画面では幅を広げる */
+    height: auto; /* 高さを自動調整 */
+  }
+
+  .card::before {
+    width: 100%;
+    height: 50%;
+    background-position: top center;
+  }
+
+  .card .image {
+    margin-bottom: 10px;
+  }
+}
 
 
 
