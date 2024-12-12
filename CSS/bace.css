@@ -616,8 +616,6 @@ table .blue-BK {
 table tbody td {
     text-align: left;
 }
-
-
 .Downloads{
     .FinishApp {
         background-image: url(../img/ダウンロード背景.png);
@@ -693,11 +691,6 @@ table tbody td {
         }
     }
 }
-
-
-
-
-
 .footer {
     position: relative;
     background-color: #D2D7DF;
