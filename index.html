@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bace.css"><link rel="stylesheet" href="js/script.js" defer>
+    <link rel="stylesheet" href="css/bace.css">
+    <script src="js/script.js" defer></script>
     <title>Quick Card</title>
 </head>
 <body>
@@ -36,168 +37,201 @@
         
         <article>
             <section class="first-container">
-                <div class="content">
-                    <h2>Quick Cardの紹介</h2>
-                    <p>
-                        株式会社SunSeerが手掛ける名刺管理サービスQuick Card<br>
-                        このサービスはアプリケーションでの対応となっています<br>
-                        数ある名刺管理アプリの中で営業報告、チーム五人以内で<br>
-                        の共有に当たり基本料金が無料、個人で使用の際でも無料<br>
-                        というコストに劣らないパフォーマンスを発揮する多くの<br>
-                        名刺管理よりも多い機能が搭載されており使用ユーザーに<br>
-                        とても簡単でとても使いやすい製品となっています。
-                    </p>
-                    <img class="back" src="img/棒型.svg" alt="背景画像">
-                    <img class="main-image" src="img/紹介部分の写真.jpeg" alt="ビルの写真">
-                    <img class="csll" src="img/スマホ画面.png" alt="スマホ画面の参考画像">
+                <div class="contant">
+                    <img class="BKshape" src="img/棒型.svg" alt="">
+                    <h1>Quick Cardの紹介</h1>
+                    <div class="first-flex">
+                        <img class="Phone" src="img/スマホ画面.png" alt="スマートフォン">
+                        <img class="Bill" src="img/紹介部分の写真.jpeg" alt="ビルと名刺の写真">
+                        <p>株式会社SunSeerが手掛ける名刺管理サービスQuick Card
+                            <br>このサービスはアプリケーションでの対応となっています。
+                            <br>数ある名刺管理アプリの中で営業報告、チーム五人以内で
+                            <br>の共有に当たり基本料金が無料、個人で使用の際でも無料
+                            <br>というコストに劣らないパフォーマンスを発揮する。多く
+                            <br>の名刺管理よりも多い機能が搭載されており使用ユーザー
+                            <br>にとっても簡単でとても使いやすい製品となっています。
+                        </p>
+                    </div>
                 </div>
             </section>
             <img class="AppLogo" src="img/Quick Card.svg" alt="App">
         </article>
         
-        <article>
+        <article class="js-container">
             <section class="second-container">
                 <h2>あなたのお悩み解決します！</h2>
-            <div class="second-container-Flex">
-                <div class="innerSec">
-                    <h3>名刺が多く読み込みが大変</h3>
-                    <p>20代営業職男性</p>
-                    <a href="">CLICK→</a>
+                <div class="second-container-Flex">
+                    <div class="innerSec">
+                        <h3>名刺が多く読み込みが大変</h3>
+                        <div class="clickflex">
+                            <p>20代営業職男性</p>
+                            <button onclick="showImage('image1')">CLICK→</button>
+                        </div>
+                    </div>
+                    <div class="innerSec">
+                        <h3>名刺情報の更新が大変</h3>
+                        <div class="clickflex">
+                            <p>30代営業職男性</p>
+                            <button onclick="showImage('image2')">CLICK→</button>
+                        </div>
+                    </div>
+                    <div class="innerSec">
+                        <h3>手軽な料金のものがない</h3>
+                        <div class="clickflex">
+                            <p>30代営業職男性</p>
+                            <button onclick="showImage('image3')">CLICK→</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="innerSec">
-                    <h3>名刺情報の更新が大変</h3>
-                    <p>30代営業職男性</p>
-                    <a href="">CLICK→</a>
-                </div>
-                <div class="innerSec">
-                    <h3>手軽な料金のものがない</h3>
-                    <p>30代営業職男性</p>
-                    <a href="">CLICK→</a>
-                </div>
-            </div>
-            </section>
-            <section>
                 <img class="smallimg" src="img/矢印.svg" alt="下向き矢印">
-                <img src="img/pc画面.jpg" alt="名刺読み込み画像">
-                <img src="img/吹き出し.svg" alt="吹き出し">
-                <img src="img/編集機能とプレビュー.png" alt="編集画面の写真">
-                <img src="img/吹き出し.svg" alt="吹き出し">
-                <img src="img/料金画面.png" alt="料金の画像">
-                <img src="img/吹き出し.svg" alt="吹き出し">
             </section>
+            <section class="swiper">
+                <div id="image1" class="image-container" style="display: none;">
+                    <div class="midflex">
+                        <img src="img/pc画面.jpg" alt="名刺読み込み画像">
+                        <img src="img/吹き出し.svg" alt="">
+                    </div>
+                </div>
+                <div id="image2" class="image-container" style="display: none;">
+                    <div class="midflex">
+                        <img src="img/編集機能とプレビュー.png" alt="編集画面の写真">
+                        <img src="img/吹き出し２.svg" alt="">
+                    </div>
+                </div>
+                <div id="image3" class="image-container" style="display: none;">
+                    <div class="midflex">
+                        <img src="img/料金画面.png" alt="料金の画像">
+                        <img src="img/吹き出し３.svg" alt="">
+                    </div>
+                </div>
             </section>
         </article>
+        
         <article>
             <section class="thead-container">
                 <h2>主な機能紹介</h2>
                 <img class="ipad" src="img/ipad.png" alt="ipadの画像">
                 <div class="ipad-container">
                     <div class="feature-icons">
-                        <div id="Meisi1" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">名刺データの<br>自動抽出</p>
+                        <div id="Meisi1" class="meisi" onclick="toggleDetails('feature1')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span class="Card1">名刺データの<br>自動抽出</span>
+                                </div>
+                            </div>
                         </div>
-                        <div id="Meisi2" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">営業、商談報告<br>機能</p>
+                        <div id="Meisi2" class="meisi" onclick="toggleDetails('feature2')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span class="Card2">営業、商談報告<br>機能</span>
+                                </div>
+                            </div>
                         </div>
-                        <div id="Meisi3" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">スマホ連携</p>
+                        <div id="Meisi3" class="meisi" onclick="toggleDetails('feature3')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span class="Card3">スマホ連携</span>
+                                </div>
+                            </div>
                         </div>
-                        <div id="Meisi4" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">セキュリティ</p>
+                        <div id="Meisi4" class="meisi" onclick="toggleDetails('feature4')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span class="Card4">セキュリティー</span>
+                                </div>
+                            </div>
                         </div>
-                        <div id="Meisi5" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">名刺Preview<br>編集機能</p>
+                        <div id="Meisi5" class="meisi" onclick="toggleDetails('feature5')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span class="Card5">名刺Preview<br>編集機能</span>
+                                </div>
+                            </div>
                         </div>
-                        <div id="Meisi6" class="meisi">
-                            <img src="img/名刺.svg" alt="名刺の画像">
-                            <p class="meisi-text">名刺シェア機能</p>
+                        <div id="Meisi6" class="meisi" onclick="toggleDetails('feature6')">
+                            <div class="card-container">
+                                <div class="card back"></div>
+                                <div class="card front">
+                                    <span>名刺シェア機能</span>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section class="quick-card">
+        
+            <!-- 各機能の詳細セクション（画像と説明が同時に表示） -->
+            <section id="feature1" class="quick-card" style="display:none;">
                 <div class="quick-card-inner">
-                    <img class="laptop" src="img/pc画面.jpg" alt="パソコン画面">
+                    <img class="laptop" src="img/pc画面.jpg" alt="名刺データの自動抽出">
                     <div class="card-content">
                         <h3>名刺データの自動抽出</h3>
                         <p>カメラで撮影された名刺画像をもとに、テキスト情報を自動的に読み取り、名刺から氏名、会社名、役職、電話番号、住所などの情報を正確に取得できます。</p>
-                        <h3>複数名刺対応</h3>    
-                        <p>複数枚の名刺を一度にスキャンが可能
-                            <br>バッチ処理で複数の名刺情報を同時に
-                            <br>解析・ データ化ができる</p>
                     </div>
                 </div>
+            </section>
+        
+            <section id="feature2" class="quick-card" style="display:none;">
                 <div class="quick-card-inner">
-                    <img class="laptop" src="img/pc画面商談記録.png" alt="商談報告画面">
+                    <img class="laptop" src="img/pc画面商談記録.png" alt="営業、商談報告機能">
                     <div class="card-content">
                         <h3>営業、商談報告機能</h3>
-                        <p>営業に行った際に名刺を交換した際にいつ、
-                            <br>どこで、どんな内容で営業を行ったかや商談
-                            <br>の内容を相手方の名刺情報とともに上司やそ
-                            <br>の他の報告をする人への営業報告機能となっ
-                            <br>ている。</p>
+                        <p>営業に行った際に名刺を交換した際にいつ、どこで、どんな内容で営業を行ったかや商談の内容を相手方の名刺情報とともに上司やその他の報告をする人への営業報告機能となっています。</p>
                     </div>
                 </div>
+            </section>
+        
+            <section id="feature3" class="quick-card" style="display:none;">
                 <div class="quick-card-inner">
-                    <img class="laptop" src="img/スマホ連携.png" alt="スマホ連携ができる画面">
+                    <img class="laptop" src="img/スマホ連携.png" alt="スマホ連携">
                     <div class="card-content">
                         <h3>スマホ連携</h3>
-                        <p>アプリ内で管理されている名刺情報をスマートフォンで
-                            <br>電話アイコンやメールアイコンを押すことですぐに連絡
-                            <br>やメールをすることが可能 </p>
-                        <h3>電話＆メール連携</h3>
-                        <p>名刺に登録された電話番号やメールアドレスをタップする
-                            <br>ことで、すぐに電話をかけたりメールを送信が可能これに
-                            <br>より、業務効率が向上が可能</p>
+                        <p>アプリ内で管理されている名刺情報をスマートフォンで電話アイコンやメールアイコンを押すことで、すぐに連絡やメールをすることが可能です。</p>
                     </div>
                 </div>
-                    <div class="quick-card-inner">
-                        <img class="laptop" src="img/セキュリティー.png" alt="">
-                    <div class="card-content">
-                        <h3>セキュリティプライバシー</h3>
-                        <p>名刺情報は重要な個人情報を含むためアプリの
-                            <br>セキュリティ対策（暗号化、データの安全な保
-                            <br>存を）徹底している。</p>
-                            <h3>アクセス権限管理</h3>
-                            <p>カメラやストレージ、連絡先など、必要な
-                                <br>アクセス権限を適切に管理し、ユーザーの
-                                <br>プライバシーを守ります</p>
-                    </div>
-                </div>
+            </section>
+        
+            <section id="feature4" class="quick-card" style="display:none;">
                 <div class="quick-card-inner">
-                    <img class="laptop" src="img/編集機能とプレビュー.png" alt="編集機能画面">
+                    <img class="laptop" src="img/セキュリティー.png" alt="セキュリティ">
+                    <div class="card-content">
+                        <h3>セキュリティ</h3>
+                        <p>名刺情報は重要な個人情報を含むため、アプリのセキュリティ対策（暗号化、データの安全な保管）を徹底しています。</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="feature5" class="quick-card" style="display:none;">
+                <div class="quick-card-inner">
+                    <img class="laptop" src="img/編集機能とプレビュー.png" alt="編集機能">
                     <div class="card-content">
                         <h3>編集機能と名刺Preview</h3>
-                        <p>同じ名前の人物が複数の名刺を持っている場合
-                            <br>過去の名刺履歴を保持しつつ、最新の名刺情報
-                            <br>を更新が可能</p>
-                            <h3>プレビュー機能</h3>
-                            <p>名刺の詳細情報をプレビュー表示すること
-                                <br>で、名刺情報を確認が簡単また、登録済み
-                                <br>の名刺データに対する編集も可能！</p>
+                        <p>過去の名刺履歴を保持しつつ、最新の名刺情報を更新できます。また、名刺の詳細情報をプレビュー表示することで、名刺情報を確認でき、編集も可能です。</p>
                     </div>
                 </div>
+            </section>
+        
+            <section id="feature6" class="quick-card" style="display:none;">
                 <div class="quick-card-inner">
-                    <img class="laptop" src="img/SNS共有.png" alt="SNS共有画面">
+                    <img class="laptop" src="img/SNS共有.png" alt="シェア機能">
                     <div class="card-content">
                         <h3>シェア機能</h3>
-                        <p>ユーザーが名刺情報をURLとして生成し、
-                            <br>ウェブブラウザでアクセスが可能！</p>
+                        <p>ユーザーが名刺情報をURLとして生成し、ウェブブラウザでアクセスが可能になります。</p>
                     </div>
                 </div>
             </section>
         </article>
-
+        
         <div class="container">
             <div class="content">
               <h2>使用イメージ</h2>
-                <div class="card">
+                <div class="">
                   <div class="text-column">
                     <div class="number">No.1</div>
                     <p>名刺を交換する</p>
@@ -206,7 +240,7 @@
                     <img src="img/名刺交換.png" alt="名刺を交換する">
                   </div>
                 </div>
-                <div class="card">
+                <div class="">
                   <div class="text-column">
                     <div class="number">No.2</div>
                     <p>スマホで読み込む</p>
@@ -215,7 +249,7 @@
                     <img src="img/スマホ読み込み.png" alt="スマホで読み込む">
                   </div>
                 </div>
-                <div class="card">
+                <div class="">
                   <div class="text-column">
                     <div class="number">No.3</div>
                     <p>自動的に情報を同期</p>
@@ -224,7 +258,7 @@
                     <img src="img/商談報告.png" alt="自動的に情報を同期">
                   </div>
                 </div>
-                <div class="card">
+                <div class="">
                   <div class="text-column">
                     <div class="number">No.4</div>
                     <p>作業効率がUP！</p>
