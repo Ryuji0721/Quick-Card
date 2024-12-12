@@ -3,6 +3,9 @@
     list-style: none;
     margin: 0 auto;
 }
+body{
+    overflow-x: hidden;
+}
 img{
     width: 100%;
 }
@@ -33,7 +36,6 @@ img{
         display: flex;
         align-items: center;
         background-color: rgba(255, 255, 255, 0.5); 
-        backdrop-filter: blur(5px); 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         padding: 5px 20px;
         border-radius: 30px;
@@ -78,18 +80,20 @@ img{
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size:48px;
     line-height: 1.5;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
+    padding-top: 30px;
 }
 
 .DLbtn {
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
+    position: fixed; /* 画面上で固定 */
+    bottom: 10%; /* 画面下部から10% */
+    right: 5%; /* 画面右側から5% */
     text-align: center;
+    z-index: 1000; /* 他の要素の上に表示 */
 }
 
 .download-button {
@@ -98,17 +102,17 @@ h1 {
     justify-content: center;
     background-color: #0056b3;
     color: white;
-    font-size: 1.5rem;  /* フォントサイズを大きく */
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 15px 30px;  /* パディングを大きくしてボタンを広げる */
-    border-radius: 8px;  /* 角丸を少し大きく */
+    padding: 15px 30px;
+    border-radius: 35px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease; /* 背景色の変化もアニメーション */
 }
 
 .download-button:hover {
-    background-color: #003d8a;
-    transform: scale(1.1); /* ホバー時に少し大きくなる */
+    background: linear-gradient(90deg, #0077B6, #4DA9D9, #00A7FF); /* グラデーションを適用 */
+    transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -118,18 +122,26 @@ h1 {
     margin-left: 15px; /* アイコンとテキストの間隔を広げる */
 }
 
+
 .first-container{
-    position: relative;
     margin: 80px 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "App null1";
+    grid-area: null1;
     h1{
         
         position: absolute;
-        right: 17%;
+        right: 15%;
         
+    }
+    .AppLogo{
+        grid-area: App;
+        transform: rotate(-90deg) scale(2.8); /* 1.5倍に拡大 */
+        margin-top: 115%;
     }
 }
 .BKshape{
-    width: 80%;
     float: right;
 }
 .first-flex p{
@@ -149,11 +161,10 @@ h1 {
     width: 25%;
     position: absolute;
     left: 47%;
-    padding-top: 20%;
+    padding-top: 16%;
 }
-.js-container{
-    background-color:rgb(210, 215, 223,0.15);
-}
+
+
 .js-container h2{
     padding: 80px 0;
 }
@@ -169,13 +180,26 @@ h1 {
 }
 .second-container img{
     width: 5%;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 .second-container .innerSec{
     background-color: #ffffff;
     padding: 20px;
     border-radius: 20px;
 }
+.arrow-head {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* 左側の透明部分 */
+    border-right: 15px solid transparent; /* 右側の透明部分 */
+    border-bottom: 25px solid #000; /* 矢印の色（黒） */
+    transform: rotate(180deg); /* 必要に応じて角度を調整 */
+    margin: 50px auto; /* 上下に50pxの余白、左右中央に配置 */
+  }
+  .js-container{
+    padding-bottom: 80px;
+  }
+  
 .swiper{
     width: 20%;
 }
@@ -188,7 +212,7 @@ h1 {
 }
 .clickflex{
     display: flex;
-    padding: 10px;
+    padding: 35px 10px 0;
 }
 .clickflex p{
     padding-right: 10px;
@@ -204,7 +228,7 @@ h1 {
 }
 
 .clickflex button:hover {
-    background-color: #005F8A; /* ホバー時の背景色を濃い青に変更 */
+    background-color: #003249; /* ホバー時の背景色を濃い青に変更 */
     transform: scale(1.1); /* ホバー時にボタンを少し拡大 */
 }
 
@@ -213,36 +237,40 @@ h1 {
 .thead-container {
     position: relative;
     text-align: center; /* セクション内の要素を中央に配置 */
-    background-color: rgba(0, 119, 182, 0.05); /* rgba形式で透明度を設定 */
-    padding-bottom: 80px;
+    background-color: rgba(0, 119, 182, 0.08);
+    padding-bottom: 40px;
 }
 .thead-container h2{
-    padding: 80px;
+    padding: 80px 0 30px;
 }
 
 /* iPad画像の中央配置 */
 .ipad {
     position: relative;
-    width: 65%;
+    width: 50%;
     display: block; /* 画像がインライン要素として扱われないようにする */
     margin: 0 auto; /* 左右のマージンを自動にして中央配置 */
+    background-color: #FFFFFF;
+    border-radius: 50px;
 }
 
 /* アイコンのグリッドレイアウト */
 .feature-icons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3列 */
+    grid-template-columns:calc(100%/3); /* 3列 */
     grid-template-areas: "Card1 Card2 Card3"
                          "Card4 Card5 Card6"; /* 2行に分けたグリッド */
     position: absolute;
     top: 28%;
-    left: 51%; /* 横方向に中央配置 */
+    left: 49%; /* 横方向に中央配置 */
     transform: translateX(-50%); /* 横中央を確保 */
-    height: 40vh;
-    width: 60%; /* 30%から60%に変更してアイコンが広がるように調整 */
     margin: 0 auto;
     align-content: space-around; /* アイコン間のスペースを均等に配置 */
+    gap: 30px;
 }
+
+
+
 
 /* グリッドエリアの定義 */
 .Card1 { grid-area: Card1; }
@@ -255,23 +283,23 @@ h1 {
 /* カードコンテナ */
 .card-container {
     position: relative;
-    width: 200px;
-    height: 300px;
-    margin: 0 auto; /* カードを中央に配置 */
+    width: 140px;
+    height: 200px;
+    margin: 0 auto;
 }
 
 /* カード本体 */
 .card {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    background-color: #ADBFC2;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 119, 182, 0.8); /* 透明度を付けた青色の背景 */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease; /* アニメーションのスムーズな遷移 */
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ほんのり影をつけて立体感を出す */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* ほんのり影をつけて立体感を出す */
 }
 
 /* 裏面のカード */
@@ -293,7 +321,7 @@ h1 {
 /* カード内のテキスト */
 .card span {
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -301,9 +329,8 @@ h1 {
 
 /* Quick Card セクション */
 .quick-card {
-    background-color: #eaf2ff;
-    padding: 40px 20px;
     text-align: center;
+    background-color: rgba(0, 119, 182, 0.08);
 }
 
 .quick-card-inner {
@@ -311,9 +338,9 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px; /* ギャップを縮めて、画像とテキストの間隔を近くする */
     max-width: 1100px;
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 
 .laptop {
@@ -321,17 +348,39 @@ h1 {
     border-radius: 12px;
     background-color: #ffffff;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px; /* テキストとの間隔を小さくするためのマージン */
 }
 
+
+
+.card-content h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
 .card-content {
     max-width: 450px;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #ffffff; /* カード全体の背景を白 */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-content h3,
+.card-content p {
+    max-width: 450px;
+    text-align: left;
     padding: 15px; /* 余白を少し小さく */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
 }
 
 .card-content h3 {
@@ -347,10 +396,140 @@ h1 {
     color: #555;
 }
 
-.container img {
-    width: 30%; /* 画像のサイズ */
-    margin-bottom: 10px; /* 画像とテキスト間の間隔を少し縮める */
-}
+  
+  .bottomimg{
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+    position: absolute;
+  }
+  .bottom-left{
+    left:60px;
+    padding-top: 7%;
+  }
+  .bottom-right{
+    right: 60px;
+    padding-top: 9%;
+  }
+  .wrap h2{
+    text-align: center;
+    padding-top: 80px;
+  }
+  .BK{
+    width: 80%;
+  }
+  .BK-right{
+    float: right;
+  }
+  .BK-left{
+    float: left;
+  }
+  ol{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrap li{
+    margin: 0;
+  }
+  
+  .con{
+    padding: 30px;
+  }
+  
+  .con h3{
+    color: #FFFFFF;
+    position: absolute;
+  }
+  .con-right{
+    display: flex;
+  }
+  .con-left{
+    display: flex;
+  }
+  .con-left h3{
+    position: absolute;
+    right: 24%;
+    top: 10%;
+  }
+  .con-right h3{
+    position: absolute;
+    top: 10%;
+    left: 24%;
+
+  }
+  .con-left p{
+    position: absolute;
+    right: 26%;
+
+  }
+  .con-right p{
+    position: absolute;
+    left: 26%;
+  }
+  
+  .con p{
+    color: #FFFFFF;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+  }
+  .block-right{
+    position: relative;
+  }
+  .block-left{
+    position: relative;
+  }
+  .block-right2{
+    position: relative;
+  }
+  .block-left2{
+    position: relative;
+  }
+/* 初期状態: 右からスライド */
+.animate-right {
+    opacity: 0;
+    transform: translateX(40vw); /* 画面の40%右からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* 初期状態: 左からスライド */
+  .animate-left {
+    opacity: 0;
+    transform: translateX(-40vw); /* 画面の40%左からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* 右からスライド */
+  .animate-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置に戻る */
+  }
+  
+  /* 左からスライド */
+  .animate-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置に戻る */
+  }
+  
+  /* レスポンシブ対応: 最大1440pxを基準に調整 */
+  @media screen and (min-width: 1440px) {
+    .animate-right {
+      transform: translateX(30%); /* 固定幅の場合に調整 */
+    }
+  
+    .animate-left {
+      transform: translateX(-30%);
+    }
+  }
+  
+  
+  
+  
+  
+  
 
 
 
@@ -360,6 +539,9 @@ h1 {
 
 .table{
     text-align: center;
+    h2{
+        padding-top: 80px;
+    }
 }
 table {
     border-collapse: collapse;
@@ -440,7 +622,7 @@ table tbody td {
     .FinishApp {
         background-image: url(../img/ダウンロード背景.png);
         background-size: cover;
-        height: 500px;
+        height: 600px;
         width: 100%;
         position: relative;
         p {
@@ -505,13 +687,19 @@ table tbody td {
         .svg2{
             position: absolute;
             right: 6%;
-            top: 70%;
+            top: 58%;
             padding-top: 30px;
             width: 100%;
         }
     }
 }
+
+
+
+
+
 .footer {
+    position: relative;
     background-color: #D2D7DF;
     color: #333;
     text-align: center;
@@ -579,19 +767,6 @@ table tbody td {
             width: 30px;
             margin: 0 10px;
         }
-        .Gotop{
-            position: absolute;
-            right: 10px;
-            padding: 20px 40px;
-            border-radius: 40px;
-            background-color: #0056b3;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            &:hover {
-                background-color: #003d8a; 
-                transform: scale(1.1); 
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-            }
-        }
     }
 
     .Copyright1 {
@@ -600,4 +775,5 @@ table tbody td {
         padding: 1%;
         font-size: 12px;
     }
+    
 }

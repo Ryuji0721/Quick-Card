@@ -12,11 +12,11 @@
                 <nav class="gnav">
                     <a href=""><img  class="Logo" src="https://sunseer.co.jp/wp-content/themes/sunseer/images/logo.svg" alt="SunSeerのLogo"></a>
                     <ul>
-                        <li><a href="">サービス紹介</a></li>
-                        <li><a href="">機能について</a></li>
-                        <li><a href="">セキュリティについて</a></li>
-                        <li><a href="">使用イメージ</a></li>
-                        <li><a href="">他社比較</a></li> 
+                        <li><a href="index.html#no1">Quick Cardの特徴</a></li>
+                        <li><a href="index.html#no2">あなたのお悩み解決します！</a></li>
+                        <li><a href="index.html#no3">各種機能</a></li>
+                        <li><a href="index.html#no4">使用イメージ</a></li>
+                        <li><a href="index.html#no5">他社比較</a></li> 
                     </ul>
                 </nav>
     </header>
@@ -24,7 +24,7 @@
         <section class="FirstView">
             <img src="img/PCfastview.png" alt="ファーストビュー" style="width: 100%; height: auto;">
             <div class="posi">
-                <h1>スキマ時間で<br>名刺管理を</h1>
+                <h1><span style="color:#0077B6;">Quick Card</span><span><span style="font-size: 0.5em;">で</span><br>スキマ時間<span style="font-size: 0.5em;">に</span>名刺管理を</h1>
             </div>
             <div class="DLbtn">
                 <a href="#DL" class="download-button">
@@ -36,10 +36,10 @@
         
         
         <article>
-            <section class="first-container">
+            <section id="no1" class="first-container">
                 <div class="contant">
                     <img class="BKshape" src="img/棒型.svg" alt="">
-                    <h1>Quick Cardの紹介</h1>
+                    <h1>Quick Cardの特徴</h1>
                     <div class="first-flex">
                         <img class="Phone" src="img/スマホ画面.png" alt="スマートフォン">
                         <img class="Bill" src="img/紹介部分の写真.jpeg" alt="ビルと名刺の写真">
@@ -53,11 +53,11 @@
                         </p>
                     </div>
                 </div>
+                <img class="AppLogo" src="img/Quick Card.svg" alt="App">
             </section>
-            <img class="AppLogo" src="img/Quick Card.svg" alt="App">
         </article>
         
-        <article class="js-container">
+        <article id="no2" class="js-container">
             <section class="second-container">
                 <h2>あなたのお悩み解決します！</h2>
                 <div class="second-container-Flex">
@@ -65,25 +65,25 @@
                         <h3>名刺が多く読み込みが大変</h3>
                         <div class="clickflex">
                             <p>20代営業職男性</p>
-                            <button onclick="showImage('image1')">CLICK→</button>
+                            <button onclick="showImage('image1')">もっと見る→</button>
                         </div>
                     </div>
                     <div class="innerSec">
                         <h3>名刺情報の更新が大変</h3>
                         <div class="clickflex">
                             <p>30代営業職男性</p>
-                            <button onclick="showImage('image2')">CLICK→</button>
+                            <button onclick="showImage('image2')">もっと見る→</button>
                         </div>
                     </div>
                     <div class="innerSec">
                         <h3>手軽な料金のものがない</h3>
                         <div class="clickflex">
                             <p>30代営業職男性</p>
-                            <button onclick="showImage('image3')">CLICK→</button>
+                            <button onclick="showImage('image3')">もっと見る→</button>
                         </div>
                     </div>
                 </div>
-                <img class="smallimg" src="img/矢印.svg" alt="下向き矢印">
+                <div class="arrow-head"></div>                 
             </section>
             <section class="swiper">
                 <div id="image1" class="image-container" style="display: none;">
@@ -107,9 +107,9 @@
             </section>
         </article>
         
-        <article>
+        <article id="no3">
             <section class="thead-container">
-                <h2>主な機能紹介</h2>
+                <h2>各種機能</h2>
                 <img class="ipad" src="img/ipad.png" alt="ipadの画像">
                 <div class="ipad-container">
                     <div class="feature-icons">
@@ -227,48 +227,45 @@
                 </div>
             </section>
         </article>
-        
-        <div class="container">
-            <div class="content">
-              <h2>使用イメージ</h2>
-                <div class="">
-                  <div class="text-column">
-                    <div class="number">No.1</div>
-                    <p>名刺を交換する</p>
-                  </div>
-                  <div class="image-column">
-                    <img src="img/名刺交換.png" alt="名刺を交換する">
-                  </div>
-                </div>
-                <div class="">
-                  <div class="text-column">
-                    <div class="number">No.2</div>
-                    <p>スマホで読み込む</p>
-                  </div>
-                  <div class="image-column">
-                    <img src="img/スマホ読み込み.png" alt="スマホで読み込む">
-                  </div>
-                </div>
-                <div class="">
-                  <div class="text-column">
-                    <div class="number">No.3</div>
-                    <p>自動的に情報を同期</p>
-                  </div>
-                  <div class="image-column">
-                    <img src="img/商談報告.png" alt="自動的に情報を同期">
-                  </div>
-                </div>
-                <div class="">
-                  <div class="text-column">
-                    <div class="number">No.4</div>
-                    <p>作業効率がUP！</p>
-                  </div>
-                  <div class="image-column">
-                    <img src="img/作業効率.jpg" alt="作業効率がUP">
-                  </div>
-                </div>
-            </div>
-          </div>
+<section class="wrap">
+  <h2>使用イメージ</h2>
+  <ol>
+    <li class="block-right animate-right">
+      <img class="BK BK-right" src="img/使用イメージ左.svg" alt="">
+      <div class="con con-right">
+        <h3>No.1</h3>
+        <p>名刺を交換する</p>
+        <img class="bottomimg bottom-right" src="img/名刺交換.png" alt="取引" width="640" height="480">
+      </div>
+    </li>
+    <li class="block-left animate-left">
+      <img class="BK BK-left" src="img/使用イメージ右.svg" alt="">
+      <div class="con con-left">
+        <h3>No.2</h3>
+        <p>スマホで読み込む</p>
+        <img class="bottomimg bottom-left" src="img/スマホ読み込み.png" alt="取引" width="640" height="480">
+      </div>
+    </li>
+    <li class="block-right2 animate-right">
+      <img class="BK BK-right" src="img/使用イメージ左.svg" alt="">
+      <div class="con con-right">
+        <h3>No.3</h3>
+        <p>自動的に情報を同期</p>
+        <img class="bottomimg bottom-right" src="img/商談報告.png" alt="取引" width="640" height="480">
+      </div>
+    </li>
+    <li class="block-left2 animate-left">
+      <img class="BK BK-left" src="img/使用イメージ右.svg" alt="">
+      <div class="con con-left">
+        <h3>No.4</h3>
+        <p>作業効率がUP！</p>
+        <img class="bottomimg bottom-left" src="img/作業効率.jpg" alt="取引" width="640" height="480">
+      </div>
+    </li>
+  </ol>
+</section>
+
+
         
         
         <!-- 表の追加 -->
@@ -362,7 +359,6 @@
             <div class="address">
                 <p>株式会社サンシーア</p>
                 <p>〒160-0000東京都新宿区西新宿4-15-7</p>
-                <a class="Gotop" href="">Topへ</a>
             </div>
             <div class="social-icons">
                 <a href="https://www.instagram.com/sunseer_sns/"><img src="img/Instagram.svg" alt="Instagram"></a>
