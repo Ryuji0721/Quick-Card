@@ -1,0 +1,1478 @@
+@charset "utf-8";
+* {
+    list-style: none;
+    margin: 0 auto;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+}
+img{
+    width: 100%;
+}
+h2{
+    font-size: 40px;
+}
+h2 {
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 20px; /* アンダーラインと下の要素の間隔を調整 */
+}
+h2::after{
+    content: ""; /* 疑似要素でアンダーラインを生成 */
+    display: block;
+    width: 8%; /* アンダーラインの幅をテキスト幅に揃える */
+    height: 3px; /* アンダーラインの太さ */
+    background-color: #0077B6; /* アンダーラインの色 */
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#DL::after{
+    opacity: 0;
+}
+
+
+h3{
+    font-size: 28px;
+}
+p{
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .Logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #353535;
+        text-decoration: none;
+        img {
+            height: 40px; 
+            margin-right: 15px; 
+        }
+    }
+
+    .gnav {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5); 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 5px 20px;
+        border-radius: 30px;
+        margin-top: 10px;
+        
+        /* ハンバーガーメニュー */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+            margin-left: auto; /* メニューの右側に表示 */
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 4px;
+            background-color: #353535;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin-left: 60px;
+            padding: 10px;
+            li {
+                margin-left: 40px; /* 項目間のスペース*/
+
+                &:first-child {
+                    margin-left: 0; /* 最初の項目に余計なスペースをつけない*/
+                }
+
+                a {
+                    text-decoration: none; 
+                    color: #353535; 
+                    font-weight: bold;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #0056b3; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.FirstView{
+    position: relative;
+    text-align: center;
+    color:#353535;
+}
+
+.posi {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size:42px;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.DLbtn {
+    position: fixed; /* 画面上で固定 */
+    bottom: 10%; /* 画面下部から10% */
+    right: 5%; /* 画面右側から5% */
+    text-align: center;
+    z-index: 1000; /* 他の要素の上に表示 */
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 35px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease; /* 背景色の変化もアニメーション */
+}
+
+.download-button:hover {
+    background: linear-gradient(90deg, #0077B6, #4DA9D9, #00A7FF); /* グラデーションを適用 */
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.DownloadIcon {
+    width: 30px; /* アイコンのサイズを大きく */
+    height: 30px;
+    margin-left: 15px; /* アイコンとテキストの間隔を広げる */
+}
+
+
+.first-container{
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "App null1";
+    grid-area: null1;
+    h1{
+        
+        position: absolute;
+        right: 15%;
+        font-size: 32px;
+        
+    }
+    .AppLogo{
+        grid-area: App;
+        transform: rotate(-90deg) scale(2.8); /* 1.5倍に拡大 */
+        margin-top: 115%;
+    }
+}
+.BKshape{
+    float: right;
+}
+.first-flex p{
+    color: #ffffff;
+    position: absolute;
+    padding-top: 11%;
+    right: 5%;
+}
+.Phone{
+    width: 15%;
+    position: absolute;
+    padding-top: 4%;
+    left: 38%;
+    z-index: 2;
+}
+.Bill{
+    width: 25%;
+    position: absolute;
+    left: 47%;
+    padding-top: 16%;
+}
+.js-container h3 {
+    font-size: 24px;
+}
+
+.js-container h2 {
+    padding: 80px 0;
+}
+
+.js-container {
+    padding-bottom: 80px;
+}
+
+.second-container {
+    text-align: center;
+}
+
+.second-container-Flex {
+    display: flex;
+    width: 70%;
+    padding: 50px;
+    background-color: rgba(0, 119, 182, 0.3); /* 背景色に透明度40%を追加 */
+    border-radius: 60px;
+}
+
+.second-container img {
+    width: 5%;
+    margin: 20px 0;
+}
+
+.second-container .innerSec {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.swiper {
+    width: 100%; /* スクリーンサイズに合わせて幅調整 */
+}
+
+.midflex {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.laptop2{
+    width: 40%;
+}
+.clickflex {
+    display: flex;
+    padding: 25px 10px 0;
+}
+
+.clickflex p {
+    padding-right: 10px;
+}
+
+.clickflex button {
+    background-color: #0077B6; /* ボタンの背景色を青に設定 */
+    color: white; /* テキストの色を白に設定 */
+    border: none; /* ボーダーを削除 */
+    border-radius: 10px; /* 角を丸める */
+    padding: 10px 15px; /* ボタン内の余白 */
+    cursor: pointer; /* カーソルをポインタに変更 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* スムーズなホバー効果 */
+}
+
+.clickflex button:hover {
+    background-color: #003249; /* ホバー時の背景色を濃い青に変更 */
+    transform: scale(1.1); /* ホバー時にボタンを少し拡大 */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #CC0000;
+}
+
+/* 画像が表示される場所 */
+.image-container {
+    display: none;
+    position: relative;
+    margin-top: 20px; /* second-container-Flexの下に表示 */
+    width: 100%;
+    z-index: 1; /* 他のコンテンツの上に表示 */
+}
+
+/* 表示される画像のレイアウト調整 */
+.midflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 閉じるボタンのスタイル */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #CC0000;
+}
+.image-container {
+    display: none; /* 初期状態は非表示 */
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* セクション内の配置 */
+.thead-container {
+    position: relative;
+    text-align: center; /* セクション内の要素を中央に配置 */
+    background-color: rgba(0, 119, 182, 0.08);
+    padding-bottom: 40px;
+}
+.thead-container h2{
+    padding: 80px 0 30px;
+}
+
+/* iPad画像の中央配置 */
+.ipad {
+    position: relative;
+    width: 50%;
+    display: block; /* 画像がインライン要素として扱われないようにする */
+    margin: 0 auto; /* 左右のマージンを自動にして中央配置 */
+    background-color: #FFFFFF;
+    border-radius: 25px;
+}
+
+/* アイコンのグリッドレイアウト */
+.feature-icons {
+    display: grid;
+    grid-template-columns:calc(100%/3); /* 3列 */
+    grid-template-areas: "Card1 Card2 Card3"
+                         "Card4 Card5 Card6"; /* 2行に分けたグリッド */
+    position: absolute;
+    top: 33%;
+    left: 49%; /* 横方向に中央配置 */
+    transform: translateX(-50%); /* 横中央を確保 */
+    margin: 0 auto;
+    align-content: space-around; /* アイコン間のスペースを均等に配置 */
+    gap: 30px;
+}
+
+
+
+
+/* グリッドエリアの定義 */
+.Card1 { grid-area: Card1; }
+.Card2 { grid-area: Card2; }
+.Card3 { grid-area: Card3; }
+.Card4 { grid-area: Card4; }
+.Card5 { grid-area: Card5; }
+.Card6 { grid-area: Card6; }
+
+/* カードコンテナ */
+.card-container {
+    position: relative;
+    width: 140px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* カード本体 */
+.card {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 119, 182, 0.8); /* 透明度を付けた青色の背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease; /* アニメーションのスムーズな遷移 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* ほんのり影をつけて立体感を出す */
+}
+
+/* 裏面のカード */
+.card.back {
+    transform: rotate(0deg);
+}
+
+/* ホバー時の裏面カード */
+.card-container:hover .card.back {
+    transform: rotate(-15deg);
+}
+
+/* 表面のカード */
+.card.front {
+    z-index: 1;
+    box-shadow: 0px 0px 22.8px rgba(0, 0, 0, 0.37); /* 立体感を強調する影 */
+}
+
+/* カード内のテキスト */
+.card span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/* Quick Card セクション */
+.quick-card {
+    text-align: center;
+    background-color: rgba(0, 119, 182, 0.08);
+}
+
+.quick-card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.laptop {
+    width: 50%; /* 画像のサイズ */
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* テキストとの間隔を小さくするためのマージン */
+}
+
+
+
+.card-content h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+.card-content {
+    max-width: 450px;
+    text-align: left;
+    background-color: #ffffff; /* カード全体の背景を白 */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-content h3,
+.card-content p {
+    max-width: 450px;
+    text-align: left;
+    padding: 15px; /* 余白を少し小さく */
+    border-radius: 10px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-content h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+  
+  .bottomimg{
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+    position: absolute;
+  }
+  .bottom-left{
+    left:60px;
+    padding-top: 7%;
+  }
+  .bottom-right{
+    right: 60px;
+    padding-top: 9%;
+  }
+  .wrap h2{
+    text-align: center;
+    padding-top: 80px;
+  }
+  .BK{
+    width: 80%;
+  }
+  .BK-right{
+    float: right;
+  }
+  .BK-left{
+    float: left;
+  }
+  ol{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrap li{
+    margin: 0;
+  }
+  
+  .con{
+    padding: 30px;
+  }
+  
+  .con h3{
+    color: #FFFFFF;
+    position: absolute;
+  }
+  .con-right{
+    display: flex;
+  }
+  .con-left{
+    display: flex;
+  }
+  .con-left h3{
+    position: absolute;
+    right: 23%;
+    top: 10%;
+  }
+  .con-right h3{
+    position: absolute;
+    top: 10%;
+    left: 23%;
+
+  }
+  .con-left p{
+    position: absolute;
+    right: 26%;
+
+  }
+  .con-right p{
+    position: absolute;
+    left: 26%;
+  }
+  
+  .con p{
+    color: #FFFFFF;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+  }
+  .block-right{
+    position: relative;
+  }
+  .block-left{
+    position: relative;
+  }
+  .block-right2{
+    position: relative;
+  }
+  .block-left2{
+    position: relative;
+  }
+/* 初期状態: 右からスライド */
+.animate-right {
+    opacity: 0;
+    transform: translateX(40vw); /* 画面の40%右からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* 初期状態: 左からスライド */
+  .animate-left {
+    opacity: 0;
+    transform: translateX(-40vw); /* 画面の40%左からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* 右からスライド */
+  .animate-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置に戻る */
+  }
+  
+  /* 左からスライド */
+  .animate-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置に戻る */
+  }
+  
+  /* レスポンシブ対応: 最大1440pxを基準に調整 */
+  @media screen and (min-width: 1440px) {
+    .animate-right {
+      transform: translateX(30%); /* 固定幅の場合に調整 */
+    }
+  
+    .animate-left {
+      transform: translateX(-30%);
+    }
+  }
+.table{
+    text-align: center;
+    h2{
+        padding-top: 80px;
+    }
+}
+table {
+    border-collapse: collapse;
+    margin: 80px auto; /* 表全体の上下余白を追加 */
+    width: 70%; /* 横幅を70%に設定 */
+    table-layout: fixed;
+    border: 2px solid #eee;
+    
+}
+
+table thead tr {
+    background-color: #353535; /* ヘッダーの背景色 */
+    color: #fff; /* ヘッダー文字色 */
+}
+
+table tr {
+    background-color: #fff; /* 行の背景色 */
+}
+
+table tr:last-child {
+    border: none; /* 最終行の余分なボーダーを削除 */
+}
+
+table th, table td {
+    padding: 0.8em 0.2em; /* セル内の余白を増やしてゆったり配置 */
+    border-right: 2px solid #eee; /* セル右側のボーダー */
+    font-size: 1em; /* テキストサイズを微調整 */
+    line-height: 2.0em; /* テキスト間隔を広げる */
+}
+
+table th {
+    font-size: 1.2em; /* ヘッダーのフォントサイズを少し大きく */
+    text-align: center; /* ヘッダーを中央揃え */
+}
+
+table tbody th {
+    background-color: #f9f9f9; /* サイド列の背景色 */
+    border-right: 2px solid #eee;
+    text-align: center; /* 基本情報列を中央揃え */
+}
+
+table tbody td {
+    text-align: left; /* その他の列を左揃え */
+}
+
+table .blue-BK {
+    background: #0077B6; 
+    color: #fff; /* 白文字 */
+}
+
+.price {
+    color: #353535; /* 黒文字 */
+    font-weight: bold;
+    font-size: 1.2em; /* 価格部分のフォントサイズ */
+    text-align: center;
+}
+
+.price span {
+    font-size: 0.8em; /* 小さいテキストのサイズ */
+}
+
+.blue-txt {
+    color: #0077B6; /* 赤文字 */
+}
+.blue-BK{
+    background-color: #0077B6;
+}
+
+.border-row {
+    border-bottom: 3px solid #50535d; /* 境界線の色と太さ */
+}
+table tbody td {
+    text-align: left;
+}
+.Downloads{
+    .FinishApp {
+        background-image: url(../img/ダウンロード背景.png);
+        background-size: cover;
+        height: 600px;
+        width: 100%;
+        position: relative;
+        p {
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        /* 画像の上に透明なオーバーレイを追加 */
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(53, 53, 53, 0.6); /* #353535 with 60% transparency */
+            z-index: 1; /* 背景画像の上に表示 */
+        }
+    }
+    
+    h2{
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:  30px;
+        z-index: 2;
+    }
+    .app1{
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        bottom: 0;
+        z-index: 2;
+        width: 15%;
+        img{
+            width: 100%;
+        }
+        .p1{
+            padding-bottom: 20px;
+        }
+        .svg1{
+            width: 95%;
+        }
+    }
+    .googleApp{
+        position: absolute;
+        top: 20%;
+        right: 30%;
+        bottom: 0;
+        z-index: 2;
+        width: 17%;
+        img{
+            width: 88%;
+        }
+        .p2{
+            padding-bottom: 20px;
+            margin-right:40px ;
+        }
+        .svg2{
+            position: absolute;
+            right: 6%;
+            top: 58%;
+            padding-top: 30px;
+            width: 100%;
+        }
+    }
+}
+.footer {
+    position: relative;
+    background-color: #D2D7DF;
+    color: #333;
+    text-align: center;
+
+    .footer-middle {
+        width: 60%;
+        display: grid;
+        gap: 5%;
+        grid-template-areas: "grid1 grid2 grid3";
+        padding: 40px 0;
+        align-items: center;
+
+        .grid1, .grid2, .grid3 {
+            text-align: center;
+
+            a {
+                display: block;
+                margin: 20px 0;
+                color: #007bff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 20px 40px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+                border-radius: 40px;
+                transition: background-color 0.3s ease, transform 0.3s ease; 
+                &:hover {
+                    background-color: #003d8a; 
+                    transform: scale(1.1); 
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+                }
+            }
+        }
+
+        .grid3 {
+            img {
+                width: 10%;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        padding-top: 20px;
+
+        .address {
+            margin-bottom: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+    }
+
+    .Copyright1 {
+        background-color: #353535;
+        color: #ffffff;
+        padding: 1%;
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 22px; /* 基本フォントサイズを少し大きく */
+    }
+
+    h1 {
+        font-size: 48px; /* メイン見出しのサイズ拡大 */
+    }
+
+    h2 {
+        font-size: 42px; /* セクション見出しを調整 */
+        margin-bottom: 30px;
+    }
+
+    h2::after {
+        width: 10%; /* アンダーラインを少し広げる */
+    }
+
+    .header {
+        padding: 20px 60px; /* ヘッダーの余白を広げる */
+    }
+
+    .header .gnav ul li {
+        margin-left: 60px; /* ナビゲーション間隔を拡大 */
+    }
+
+    .FirstView h1 {
+        font-size: 60px; /* ファーストビューのタイトルを拡大 */
+    }
+    .AppLogo{
+        width: 80%;
+    }
+
+    .DLbtn {
+        bottom: 8%; /* ダウンロードボタンの位置を微調整 */
+        right: 3%;
+    }
+
+    .swiper {
+        width: 30%; /* スワイパーサイズを広げる */
+    }
+    .clickflex button{
+        padding: 15px 20px;
+    }
+    .feature-icons {
+        gap: 50px; /* アイコン間隔を広げる */
+    }
+
+    .ipad {
+        width: 40%; /* iPad画像のサイズ拡大 */
+    }
+
+    .second-container-Flex {
+        width: 80%; /* セクション幅を広げる */
+    }
+
+    .quick-card-inner {
+        max-width: 1400px; /* カードセクションの幅を調整 */
+    }
+
+    .card-content {
+        max-width: 600px; /* カードの最大幅を拡大 */
+    }
+
+    .Downloads .FinishApp {
+        height: 800px; /* 背景セクションの高さを調整 */
+    }
+    .FinishApp{
+        .svg1{
+            padding-top: 40px;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    *{
+        max-width:1024px;
+    }
+    p{
+        font-size:1rem;
+    }
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .Logo{
+        width: 60%;
+        margin: 0;
+    }
+    .header{
+    .gnav {
+    ul{
+        margin-left: -76px;
+    }
+    }}
+    .header {
+        .gnav {
+            margin-top: 10px;
+        }
+    }
+    .Downloads{
+        .googleApp{
+            .svg2{
+                top: 45%;
+            }
+        }
+    }
+
+    .feature-icons{
+        top: 35%;
+        left    : 49%;
+        gap: 20px;
+    }
+    .con-left p {
+        right: 23%;
+    }
+    .con-right p {
+        left: 22%;
+    }
+    .card-container {
+        position: relative;
+        width: 115px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    .Bill {
+        width: 25%;
+        position: absolute;
+        left: 47%;
+        padding-top: 18%;
+        .image-container {
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }}
+    .second-container-Flex {
+        display: flex;
+        width: 90%;
+        padding: 30px;
+        background-color: rgba(0, 119, 182, 0.3);
+        border-radius: 60px;
+        gap: 20px;
+        p{
+            font-size: 14px;
+        }
+    }
+    .card-content {
+        max-width: 420px;
+        text-align: left;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .midflex{
+        margin-left:20% ;
+        .laptop2{
+            width: 45%;
+            border-radius: 16px;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .hukidasi{
+            width: 30%;
+            margin-right: 23%;
+        }
+    }
+    .first-flex p {
+        color: #ffffff;
+        position: absolute;
+        padding-top: 10%;
+        right: 5%;
+        font-size: 12px;
+        line-height: 1.6;
+    }    
+    .quick-card-inner{
+        margin-top: -10px;
+        width: 98%;
+    }
+    .quick-card {
+        width: 100%;
+        margin: 10px auto;
+        transition: all 0.3s ease;
+    }
+    
+    .Downloads.FinishApp{
+        height: 500px;
+    }
+    table th, table td {
+        padding: 0.8em 0.2em;
+        border-right: 2px solid #eee;
+        font-size: 14px;
+        line-height: 2.0em;
+    }
+    
+    
+    /* Adjust animation classes for tablet view */
+    .animate-right, .animate-left {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    
+    .animate-right.visible {
+        animation: slideInRight-tablet 0.8s ease forwards;
+    }
+    
+    .animate-left.visible {
+        animation: slideInLeft-tablet 0.8s ease forwards;
+    }
+    
+    @keyframes slideInRight-tablet {
+        from {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideInLeft-tablet {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    }
+@media screen and (max-width:768px) {
+    *{
+        max-width: 768px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .con p{
+        font-size:1rem;
+    }
+    .card-container {
+        position: relative;
+        width: 98px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    .feature-icons{
+        top: 40%;
+        left: 49%;
+        gap: 10px;
+    }
+        body {
+          font-size: 16px; /* 文字サイズを16pxに設定 */
+        }
+      
+        h1 {
+          font-size: 26px; /* h1見出し */
+        }
+      
+        h2 {
+          font-size: 24px; /* h2見出し */
+        }
+      
+        h3 {
+          font-size: 20px; /* h3見出し */
+        }
+        .contant h1{
+            font-size: 26px;
+        }
+        .js-container h3 {
+            font-size: 20px;
+        }
+        .Phone{
+            left: 33%;
+        }
+        .BKshape{
+            width: 114%;
+        }
+        .Bill {
+            width: 25%;
+            left: 44%;
+            padding-top: 23%;
+        }
+        .card-content {
+            max-width: 300px;
+            text-align: left;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .card-content h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .card-content p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .card span {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }   
+        .first-flex p {
+            color: #ffffff;
+            padding-top: 10%;
+            right: 2%;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .ipad{
+            width: 55%;
+        }
+        .Downloads {
+            .FinishApp {
+                background-size: cover;
+                height: 450px;
+                width: 100%;
+            }
+        }
+        .button {
+            font-size: 16px; /* ボタンのフォント */
+          }
+          table tbody td{
+              font-size: 14px;
+        }
+        
+      .Downloads {
+          & .googleApp {
+              .p2 {
+                  padding-bottom: 20px;
+                  margin-right: 17px;
+              }
+          }
+      }   
+      .Downloads {
+          & .googleApp {
+              .svg2 {
+                  top: 51%;
+              }
+          }
+      }
+      .first-container {
+        .AppLogo {
+            grid-area: App;
+            transform: rotate(-90deg) scale(2.8);
+            margin-top: 100%;
+            margin-left: -25px;
+        }
+    }
+    .footer{
+        .footer-middle{
+            width: 85%;
+        }
+    }
+  
+    }
+@media(min-width:375px) and (max-width:425px) {
+    *{
+        max-width: 425px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    .posi{
+        top: 77%;
+        left: 44%;
+        transform: translateX(-50%);
+    }
+    .FirstView-img100{
+        height:500px !important;
+        object-fit: cover;
+    }
+    .header{
+        .gnav{
+            display: none;
+        }
+    }
+    .first-flex p{
+        font-size: 12px;
+    }
+    .BKshape{
+        display: none;
+    }
+    .contant {
+        background: #0077B6; /* 背景色 */
+        width: 300px; /* 固定幅 */
+        height: 600px; /* 固定高さ */
+        transform: translateX(21%);
+        margin-top: 40px;
+        border-radius: 150px 150px 0 0; /* 上だけ丸くする */
+    }
+    .H21{
+        margin-top: 7%;
+    }
+    .first-flex p {
+        font-size: 14px;
+        margin-top: 90%;
+        width: 75%;
+        transform: translateX(-12%);
+        br {
+            display: none; /* `<br>`タグを非表示にする */
+        }
+        
+    }
+    .first-container{
+        margin: 0;
+    }
+    .Bill{
+        width: 50%;
+        top: 17%;
+        left: 35%;
+    }
+    .Phone{
+        width: 30%;
+        left: 15%;
+        position: absolute;
+        top: 15%;
+    }
+    .AppLogo{
+        display: none;
+    }
+    .ipad{
+        width: 100%;
+    }
+
+
+    .second-container-Flex {
+        display: flex;
+        flex-direction: column; /* 要素を縦に並べる */
+        width: 90%; /* 幅を広げて余白を調整 */
+        padding: 20px;
+        background-color: rgba(0, 119, 182, 0.5); /* 背景色に透明度40%を追加 */
+        border-radius: 20px; /* 角丸を少し小さく */
+        margin: 0 auto; /* 中央揃え */
+    }
+
+    .second-container img {
+        width: 50%; /* 画像のサイズを調整 */
+        margin: 10px 0; /* 上下の余白を調整 */
+    }
+
+    .second-container .innerSec {
+        background-color: #ffffff;
+        padding: 15px; /* 内部の余白を少し小さく */
+        border-radius: 10px; /* 角丸を小さく */
+        margin: 10px 0; /* 上下の余白を追加 */
+    }
+
+    .arrow-head {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent; /* 左側の透明部分 */
+        border-right: 15px solid transparent; /* 右側の透明部分 */
+        border-bottom: 25px solid #000; /* 矢印の色（黒） */
+        transform: rotate(180deg); /* 必要に応じて角度を調整 */
+        margin: 20px auto; /* 上下に20pxの余白、左右中央に配置 */
+    }
+    
+    /* h2, h3の調整 */
+    .js-container h2 {
+        padding: 50px 0; /* 上下の余白を調整 */
+        font-size: 20px; /* フォントサイズを少し小さく */
+    }
+
+    .js-container h3 {
+        font-size: 20px; /* フォントサイズを小さく */
+    }
+
+    .js-container {
+        padding-bottom: 50px; /* 下部の余白を調整 */
+    }
+    
+    .image-container {
+        display: none; /* 初期状態では非表示 */
+        margin-top: 10px;
+        position: relative; /* 閉じるボタンを画像の右下に配置 */
+    }
+    .midflex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .laptop2{
+            width: 60%;
+        }
+    }
+    .clickflex button{
+        padding: 10px 15px;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        background-color: #FF0000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+    .innerSec .image-container {
+        display: block; /* innerSec内に移動時表示 */
+        margin-top: 10px;
+        width: 100%;
+    }
+    .close-btn:hover {
+        background-color: #CC0000;
+    }
+    .card-container{
+        width: 70px;
+        height: 100px;
+    }
+    .feature-icons {
+        top: 44%;
+        left: 48%;
+        row-gap: 15px;
+        column-gap: 20px;
+    }
+    .card span{
+        font-size: 12px;
+    }
+    .thead-container{
+        padding: 0;
+    }
+    .laptop{
+        width: 75%;
+    }
+    .card-content{
+        width: 85%;
+    }
+    .wrap {
+        h3 {
+            font-size: 12px;
+            right: 22%;
+            top: 7%;
+        }
+        p {
+            font-size: 14px;
+            word-wrap: break-word;  /* 長い単語を折り返す */    
+        }
+    }
+    .con-right p{
+        word-wrap: break-word;  /* 長い単語を折り返す */   
+        width: 98px;
+        padding-left: 12px;
+        font-size: 14px;
+    }
+    .con-right h3{
+        left: 22%;
+    }
+
+    .bottom-left{
+        width: 40%;
+        padding-top: 4%;
+        left: 5%;
+    }
+    .bottom-right{
+        width: 40%;
+        padding-top: 4%;
+        right: 5%;
+    }
+    
+    }
+    
+
+
+
+
+
+
+
+
+
